@@ -19,14 +19,14 @@ public class WeatherData implements Subject{
 
     @Override
     public void registerObserver(Observer observer) {
-        if (observers.contains(observer)){
+        if (!observers.contains(observer)){
             observers.add(observer);
         }
 
     }
 
     @Override
-    public void removerObserver(Observer observer) {
+    public void removeObserver(Observer observer) {
         if (observers.contains(observer)){
             observers.remove(observer);
         }
